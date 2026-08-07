@@ -42,7 +42,7 @@ export default async function Leads(){
 
 
         {
-        leads.map((lead)=>(
+        leads.map((lead: any)=>(
 
 
           <div
