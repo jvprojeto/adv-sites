@@ -95,7 +95,7 @@ Ações
 
 
 {
-clientes.map((cliente)=>(
+clientes.map((cliente: any)=>(
 
 
 <tr
