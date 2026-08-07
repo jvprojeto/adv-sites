@@ -136,7 +136,7 @@ mt-16
 
 {
 
-services.map((service)=>(
+services.map((service:any)=>(
 
 
 <div

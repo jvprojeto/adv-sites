@@ -156,7 +156,7 @@ items-center
 
 {
 
-links.map((link)=>(
+links.map((link:any)=>(
 
 
 <a

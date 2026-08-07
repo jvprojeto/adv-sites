@@ -121,7 +121,7 @@ mt-16
 
 {
 
-demos.map((demo)=>(
+demos.map((demo:any)=>(
 
 
 <div

@@ -116,7 +116,7 @@ mt-16
 
 {
 
-plans.map((plan)=>(
+plans.map((plan:any)=>(
 
 
 <div
@@ -183,7 +183,7 @@ space-y-3
 
 {
 
-plan.features.map(feature=>(
+plan.features.map((feature:any)=>(
 
 
 <li

@@ -97,7 +97,7 @@ Modelo do site
 
 
 {
-templates.map((item)=>(
+templates.map((item:any)=>(
 
 
 <button

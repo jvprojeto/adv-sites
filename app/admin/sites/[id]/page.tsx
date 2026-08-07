@@ -250,7 +250,7 @@ cliente={{
 
 
               {
-                templates.map((item)=>(
+                templates.map((item:any)=>(
 
 
                   <label
@@ -611,7 +611,7 @@ className="peer hidden"
 
             {
 
-            site.areas.map((area)=>(
+            site.areas.map((area:any)=>(
 
 
               <div
@@ -773,7 +773,7 @@ className="peer hidden"
 
             {
 
-            site.faqs.map((faq)=>(
+            site.faqs.map((faq:any)=>(
 
 
               <div
@@ -950,7 +950,7 @@ className="peer hidden"
 
             {
 
-            site.depoimentos.map((dep)=>(
+            site.depoimentos.map((dep:any)=>(
 
 
               <div

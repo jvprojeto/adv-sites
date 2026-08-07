@@ -68,7 +68,7 @@ export default function FAQ(){
         >
 
           {
-          faqs.map((item,index)=>(
+          faqs.map((item:any,index:number)=>(
 
             <div
             key={index}

@@ -24,7 +24,7 @@ mb-8
 ">
 
 {
-abas.map((aba)=>(
+abas.map((aba:any)=>(
 
 <button
 

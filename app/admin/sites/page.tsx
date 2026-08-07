@@ -105,7 +105,7 @@ export default async function SitesPage() {
 
 
             {
-            sites.map((site)=>(
+            sites.map((site:any)=>(
 
 
               <tr
