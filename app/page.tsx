@@ -8,7 +8,6 @@ import Benefits from "@/components/sections/Benefits";
 import Portfolio from "@/components/sections/Portfolio";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
-import Link from "next/link";
 import Orcamento from "@/components/sections/Orcamento";
 import Trust from "@/components/sections/Trust";
 import Transformation from "@/components/sections/Transformation";
@@ -16,43 +15,48 @@ import Plans from "@/components/sections/Plans";
 
 import Footer from "@/components/layout/Footer";
 
-
-export default function Home(){
-
-return(
-
-<main className="min-h-screen bg-white">
+export default function Home() {
+return ( <main className="min-h-screen bg-white">
 
 
-<Navbar />
+  <Navbar />
 
-<Hero />
+  <Hero />
 
-<Process />
+  <div id="processo">
+    <Process />
+  </div>
 
-<Areas />
+  <div id="servicos">
+    <Areas />
+  </div>
 
-<About />
+  <About />
 
-<Benefits />
+  <Benefits />
 
-<Trust />
+  <Trust />
 
-<Transformation />
+  <Transformation />
 
-<Portfolio />
+  <Plans />
 
-<Plans />
+  <div id="portfolio">
+    <Portfolio />
+  </div>
 
-<Orcamento />
+  <FAQ />
 
-<CTA />
+  <div id="contato">
+  <Orcamento />
+</div>
 
-<Footer />
+  <CTA />
 
+  <Footer />
 
 </main>
 
-)
 
+);
 }
