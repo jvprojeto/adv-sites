@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Cliente {
+  id         String   @id @default(cuid())
+  nome       String
+  slug       String   @unique
+  email      String?
+  telefone   String?
+  whatsapp   String?
+  cidade     String?
+  logo       String?
+  imagemLogo String?
+  imagemHero String?
+  criadoEm   DateTime @default(now())
+
+  site Site?
+}
+
+model Site {
+  id        String @id @default(cuid())
+  clienteId String @unique
+
+  template String @default("premium")
+
+  slogan    String
+  descricao String
+  sobre     String
+
+  valor Float @default(0)
+
+  manutencao Float @default(0)
+
+  prazo String @default("7 dias")
+
+  oab String @default("OAB/SP 123456")
+
+  anosExperiencia String @default("15")
+
+  especialidade String @default("Advocacia Empresarial")
+
+  consulta String @default("Primeira consulta")
+
+  endereco String @default("São Paulo - SP")
+
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+
+  areas       Area[]
+  faqs        FAQ[]
+  depoimentos Depoimento[]
+
+  publicado Boolean @default(false)
+}
+
+model Area {
+  id     String @id @default(cuid())
+  titulo String
+
+  siteId String
+
+  site Site @relation(fields: [siteId], references: [id])
+}
+
+model FAQ {
+  id       String @id @default(cuid())
+  pergunta String
+  resposta String
+
+  siteId String
+
+  site Site @relation(fields: [siteId], references: [id])
+}
+
+model Depoimento {
+  id    String @id @default(cuid())
+  nome  String
+  texto String
+
+  siteId String
+
+  site Site @relation(fields: [siteId], references: [id])
+}
+
+model Lead {
+  id String @id @default(cuid())
+
+  nome String
+
+  whatsapp String
+
+  email String?
+
+  escritorio String?
+
+  tipoSite String?
+
+  mensagem String?
+
+  status String @default("Novo")
+
+  criadoEm DateTime @default(now())
+}
